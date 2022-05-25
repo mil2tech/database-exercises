@@ -1,13 +1,13 @@
 # SQL exercises for Group BY function
 
 #2 In your script, use DISTINCT to find the unique titles in the titles table.
-#How many unique titles have there ever been? 6 different titles
+#How many unique titles have there ever been? 7 different titles
 Select distinct title FROM titles;
 
 #3 Write a query to to find a list of all unique last names of all employees that start and end with 'E' using GROUP BY
 # total of 5 employees # last_name
 #Erde
-E#ldridge
+#Eldridge
 #Etalle
 #Erie
 #Erbe
@@ -66,3 +66,8 @@ GROUP BY gender, first_name;
 #8 Using your query that generates a username for all of the employees, generate a count employees for each unique username
 #Are there any duplicate usernames? 
 #
+
+SELECT CONCAT((substr(first_name) , '_' , last_name, ) AS user_name, emp_no, first_name, last_name, gender 
+FROM employees
+
+

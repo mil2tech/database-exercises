@@ -23,9 +23,9 @@ AND  gender = 'M';
 
 #5 Find all current or previous employees whose last name starts with 'E'
 #  1000 employees
-SELECT distinct last_name, first_name, emp_no 
+SELECT  last_name, first_name, emp_no 
 FROM employees
-WHERE last_name LIKE 'e%' ; 
+WHERE last_name LIKE 'E%' ; 
 
 #6a Find all current or previous employees whose last name starts or ends with 'E'
 # 1000
@@ -61,16 +61,16 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
 
 #9 Find all current or previous employees born on Christmas.
-# 1000 employees
+# 842 employees
 SELECT emp_no, last_name, first_name, hire_date, birth_date
 FROM employees
-WHERE birth_date LIKE '%____-12-__';
+WHERE birth_date LIKE '%____-12-25';
 
 #10 Find all current or previous employees hired in the 90s and born on Christmas
-# 1000 employees
+# 362 employees
 SELECT emp_no, last_name, first_name, hire_date, birth_date
 FROM employees
-WHERE birth_date LIKE '%____-12-__'
+WHERE birth_date LIKE '____-12-25'
 AND hire_date BETWEEN '1990-01-01' AND '1999-12-31';
 
 #11 Find all current or previous employees with a 'q' in their last name.
